@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLhan Ferrer – Resume</title>
+  <link rel="stylesheet" href="resume.css">
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">PORT<span>FOLIO</span></div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+       <ul class="nav-links">
+      <li><a href="about.html#hero">Home</a></li>
+      <li><a href="about.html#about">About</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="projects.html" >Projects</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="nav-spacer"></div>
+  <div id="parallax-bg"></div>
+
+  <section class="resume-container">
+    <h1 class="resume-title">Resume</h1>
+
+
+    <div class="profile-card">
+      <div class="profile-info">
+        <h2>JLhan Rosse P. Ferrer</h2>
+        <p><strong>Date of Birth:</strong> October 28, 2005</p>
+        <p><strong>Place of Birth:</strong> Quezon City</p>
+        <p><strong>Gender:</strong> Female</p>
+        <p><strong>Nationality:</strong> Filipino</p>
+      </div>
+      <div class="profile-pic-container">
+        <img src="remove bg.png" alt="Profile Picture" class="profile-pic">
+      </div>
+    </div>
+
+    <h2 class="section-title">Academic Qualifications</h2>
+    <div class="grid-container">
+      <div class="grid-card">
+        <h3>Polytechnic University of The Philippines-Quezon city</h3>
+        <p>Bachelor of Science in Information Technology (BSIT)</p>
+        <p>3rd Year</p>
+      </div>
+
+      <div class="grid-card">
+        <h3>Metro Manila College</h3>
+        <p>STEM</p>
+        <p>High Honors</p>
+        <p>Ranked in the top 5 among all STEM students.</p>
+        <p>S.Y. 2020–2023</p>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-card">
+        <h3>San Bartolome High School</h3>
+        <p>With Honors</p>
+        <p>S.Y. 2016–2020</p>
+      </div>
+      <div class="grid-card">
+        <h3>Odelco Elementary School</h3>
+        <p>With Honors</p>
+        <p>S.Y. 2010–2016</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Work Experience</h2>
+    <div class="grid-container">
+      <div class="grid-card">
+        <h3>Math Tutor - Freelancer</h3>
+        <p>Jan 2023 – Oct 2024</p>
+        <ul>
+          <li>One-on-one tutoring in basic math.</li>
+        </ul>
+      </div>
+      <div class="grid-card">
+        <h3>Store Staff - The Wedding Library</h3>
+        <p>Feb 2025 – Present</p>
+        <ul>
+          <li>Assisted customers with inquiries, product recommendations, and purchases</li>
+          <li>Maintained cleanliness and proper organization of the store display and stock areas</li>
+          <li>Packed and labeled customer orders for delivery or pickup</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-card">
+        <h3>Liaison Staff - The Wedding Library</h3>
+        <p>Jul 2025 – Aug 2025</p>
+        <ul>
+           <li>Verified the accuracy and completeness of submitted documents and checked if businesses had valid permits.</li>
+          <li>Collected checks from participants and coordinated with the office.</li>
+        </ul>
+      </div>
+      <div class="grid-card">
+        <h3>Video Editor - Freelancer</h3>
+        <p>Sep 2025 – Present</p>
+        <ul>
+          <li>Edited client videos for social media marketing, including reels and promotional content.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+  <div class="animated-line"></div>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

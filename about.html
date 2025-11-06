@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | JLhan Ferrer</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">PORT<span>FOLIO</span></div>
+
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="animated-bg"></div>
+  <div id="parallax">
+  <div id="parallax-bg"></div>
+
+  <h1>Portfolio</h1>
+</div>
+
+<script>
+  (function() {
+    const elem = document.querySelector("#parallax");
+
+    function parallax(e) {
+      const _w = window.innerWidth / 2;
+      const _h = window.innerHeight / 2;
+      const _mouseX = e.clientX;
+      const _mouseY = e.clientY;
+
+      const _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+      const _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+      const _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+
+      elem.style.backgroundPosition = `${_depth3}, ${_depth2}, ${_depth1}`;
+    }
+
+    document.addEventListener("mousemove", parallax);
+  })();
+</script>
+
+  <section id="hero" class="hero">
+    <div class="content">
+      <h1>Hello, I'm <span class="name">JLhan Ferrer</span></h1>
+      <h2 class="dev-title">BSIT 3-2</h2>
+      <p>I’m a third-year working student at PUP-QC, and I really love to explore everything to find out which path is truly right for me. I also believe that ‘rejections are redirections,’ because I’ve been rejected several times at work, yet I eventually got a job at the right time. The same goes for scholarships — I think everything I have now is something I truly worked hard for.</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/17CrMwamPg/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/reineeeeeeeeeee_?igsh=dnFodWd5NTU1YWUx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/reineeeeeeee" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="profile-container">
+      <img src="remove bg.png" alt="Profile Picture" class="profile-pic">
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="remove bg.png" alt="JLhan Ferrer">
+      </div>
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>
+          Hello everyone! I’m JLhan Rosse P. Ferrer, a third-year Bachelor of Science in Information Technology student 
+          from the Polytechnic University of the Philippines – Quezon City, and also a working student.
+        </p>
+        <p>
+          I currently have four work experiences, and through them, I’ve realized how valuable time and money really are. 
+          Before I started working, I used to spend carelessly and didn’t know how to save. But now, I’ve learned to become more 
+          responsible and to appreciate that time is gold — every second truly matters.
+        </p>
+        <p>
+          As a scholar ng bayan, balancing work and studies has taught me discipline and strong 
+          time management. Hopefully, I can become a Full-Stack Developer someday because I enjoy 
+          designing and dream of creating my own apps or websites. My knowledge is still growing, 
+          but I’m eager to keep learning and improving every day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-form">
+      <h1>Contact Me</h1>
+      <form action="https://formspree.io/f/xjkppdyw" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Your Gmail Address" 
+          pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" 
+          title="Please enter a valid Gmail address (must end with @gmail.com)" 
+          required
+        >
+
+        <label for="message">Message</label>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+
+        <button type="submit" id="sendBtn">SEND</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>INFO</h2>
+      <div class="info-item"><i class="fa-solid fa-envelope"></i> jlhanferrer6@gmail.com</div>
+      <div class="info-item"><i class="fa-solid fa-phone"></i> 09916008376</div>
+      <div class="info-item"><i class="fa-solid fa-location-dot"></i> Quezon City</div>
+      <div class="info-item"><i class="fa-solid fa-clock"></i> 09:00 - 17:00</div>
+
+      <div class="social-icons">
+        <a href="https://web.facebook.com/jhaz.ferrer28" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/reineeeeeeeeeee_?igsh=dnFodWd5NTU1YWUx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/reineeeeeeee" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+<div id="successPopup">Message sent successfully!</div>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+const form = document.querySelector("form");
+const btn = document.getElementById("sendBtn");
+const popup = document.getElementById("successPopup");
+
+btn.style.position = "relative";
+btn.style.overflow = "hidden";
+
+btn.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  for (let i = 0; i < 5; i++) {
+    const heart = document.createElement("span");
+    heart.innerHTML = "❤️";
+    heart.classList.add("button-heart");
+    heart.style.left = Math.random() * 80 + "%";
+    btn.appendChild(heart);
+    setTimeout(() => heart.remove(), 900);
+  }
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" }
+  })
+  .then(() => {
+    form.reset();
+    popup.classList.add("show");
+    setTimeout(() => popup.classList.remove("show"), 2500);
+  })
+  .catch(() => alert("Oops! Something went wrong"));
+});
+(function() {
+  const elem = document.querySelector("#parallax");
+
+  function parallax(e) {
+    const _w = window.innerWidth / 2;
+    const _h = window.innerHeight / 2;
+    const _mouseX = e.clientX;
+    const _mouseY = e.clientY;
+
+    const _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+    const _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+    const _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+
+    elem.style.backgroundPosition = `${_depth3}, ${_depth2}, ${_depth1}`;
+  }
+
+  document.addEventListener("mousemove", parallax);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | JLhan Ferrer</title>
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">PORT<span>FOLIO</span></div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html#hero">Home</a></li>
+      <li><a href="about.html#about">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="parallax-bg"></div>
+
+<section class="projects-section">
+  <h2 class="projects-title">My Projects</h2>
+
+  <div class="project-container">
+    <h3 class="project-title">Fur Care</h3>
+    <div class="project-content">
+      <img src="mob app.jpg" alt="Fur Care" class="project-image">
+      <div class="project-info">
+        <p>A mobile app developed as an individual project during my 2nd year. Fur Care helps pet owners monitor their pets with features like notes, first aid tips, and nutritional guidelines.</p>
+        <a href="https://drive.google.com/drive/folders/1GCdltPFVmCLhbsWRItQ8FSXLGc2sTmn2?usp=sharing" class="btn-project" target="_blank">See Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-container">
+    <h3 class="project-title">Blood Bank System</h3>
+    <div class="project-content">
+      <img src="bloodbank.png" alt="Blood Bank" class="project-image">
+      <div class="project-info">
+        <p>This is a Python project with SQL integration. My role is backend developer, handling application logic for managing blood donations and maintaining the blood bank’s inventory.</p>
+        <a href="https://github.com/clouded000/BloodLinkHub" class="btn-project" target="_blank">See Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-container">
+    <h3 class="project-title">Car Rental System</h3>
+    <div class="project-content">
+      <img src="oop.png" alt="Car Rental System" class="project-image">
+      <div class="project-info">
+        <p>This is a WinForms project developed using C#. I worked as both backend and frontend developer. The system allows users to rent cars, schedule rental periods, calculates total cost, and adds penalty fees for late returns.</p>
+        <a href="https://github.com/RalphGerard24/Car-Rental-System" class="btn-project" target="_blank">See Project</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="project-container">
+  <h3 class="project-title">Video Editing</h3>
+  <div class="project-content">
+    <video controls class="project-video">
+      <source src="vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="project-info">
+      <p>This is the video that was sent by the client, and I edited it to create a promotional reel for marketing purposes.</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <p id="modal-caption"></p>
+</div>
+
+<div class="animated-line"></div>
+
+<script>
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  const captionText = document.getElementById("modal-caption");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".project-image").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerText = img.alt;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => modal.style.display = "none");
+  modal.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+</script>
+
+</body>
+</html>
